@@ -1,0 +1,20 @@
+[versions]
+spring-boot = "3.2.5"
+
+[libraries]
+apache-commons-lang3 = "org.apache.commons:commons-lang3:3.14.0"
+apache-commons-collection4 = "org.apache.commons:commons-collections4:4.4"
+spring-boot-jpa = { module = "org.springframework.boot:spring-boot-starter-data-jpa", version.ref = "spring-boot" }
+spring-boot-redis = { module = "org.springframework.boot:spring-boot-starter-data-redis", version.ref = "spring-boot" }
+spring-boot-web = { module = "org.springframework.boot:spring-boot-starter-web", version.ref = "spring-boot" }
+junit5 = "org.junit.jupiter:junit-jupiter-engine:5.10.2"
+lombok = "org.projectlombok:lombok:1.18.32"
+logback = "ch.qos.logback:logback-classic:1.5.6"
+
+[bundles]
+apache-commons = ["apache-commons-lang3", "apache-commons-collection4"]
+spring-boot-base = ["spring-boot-jpa", "spring-boot-redis", "spring-boot-web"]
+
+[plugins]
+spring-boot = { id = "org.springframework.boot", version.ref = "spring-boot" }
+dependency-management = "io.spring.dependency-management:1.1.4"
