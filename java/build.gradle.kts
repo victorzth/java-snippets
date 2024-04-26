@@ -4,12 +4,9 @@ plugins {
 
 version = "0.0.1-SNAPSHOT"
 
-java {
-    sourceCompatibility = JavaVersion.VERSION_21
-}
-
 dependencies {
-    implementation(libs.logback)
+    api(libs.bundles.apache.commons)
+    api(libs.logback)
     testImplementation(libs.junit5)
     compileOnly(libs.lombok)
     annotationProcessor(libs.lombok)
