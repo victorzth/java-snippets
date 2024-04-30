@@ -23,7 +23,14 @@ spring:
     show-sql: true
     generate-ddl: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
     properties:
       hibernate:
         format_sql: true
+
+logging:
+  level:
+    # This is used to trace the opening and closing of transactions
+    org.springframework.transaction: trace
+    # This is used to trace parameter bindings
+    org.hibernate.orm.jdbc.bind: trace
