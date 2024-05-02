@@ -4,6 +4,7 @@ import com.akira.snippets.springboot.util.HibernateUtils;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 import java.util.Objects;
 
@@ -13,6 +14,7 @@ import java.util.Objects;
 })
 @Getter
 @Setter
+@ToString
 public class Article {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

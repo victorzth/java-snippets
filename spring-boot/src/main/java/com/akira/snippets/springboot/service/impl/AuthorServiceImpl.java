@@ -4,9 +4,7 @@ import com.akira.snippets.springboot.pojo.ao.AuthorAO;
 import com.akira.snippets.springboot.pojo.entity.Author;
 import com.akira.snippets.springboot.repository.AuthorRepository;
 import com.akira.snippets.springboot.service.AuthorService;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.hibernate.Hibernate;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -26,11 +24,8 @@ public class AuthorServiceImpl implements AuthorService {
     }
 
     @Override
-    @Transactional
-    public Author findById(Integer id) {
-        Author author = authorRepository.findById(id).orElseThrow();
-        Hibernate.initialize(author.getArticles());
-        return author;
+    public Author findDetailedById(Integer id) {
+        return authorRepository.findDetailedById(id).orElseThrow();
     }
 
     @Override

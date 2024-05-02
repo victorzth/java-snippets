@@ -72,6 +72,7 @@ logging:
 ```
 2024-05-02T16:04:33.817+08:00 TRACE 44878 --- [app] [nio-8080-exec-1] o.s.t.i.TransactionInterceptor           : Getting transaction for [com.akira.snippets.springboot.service.impl.ArticleServiceImpl.save]
 ...
-2024-05-02T16:04:38.920+08:00 TRACE 44878 --- [app] [         task-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [org.springframework.data.jpa.repository.support.SimpleJpaRepository.findById]
-2024-05-02T16:04:38.923+08:00  INFO 44878 --- [app] [         task-1] c.a.s.s.listener.ArticleEventListener    : Article created: com.akira.snippets.springboot.pojo.entity.Article@112d1c8e
+2024-05-02T16:04:33.894+08:00 TRACE 44878 --- [app] [nio-8080-exec-1] o.s.t.i.TransactionInterceptor           : Completing transaction for [com.akira.snippets.springboot.service.impl.ArticleServiceImpl.save]
+...
+2024-05-02T16:04:38.923+08:00  INFO 44878 --- [app] [         task-1] c.a.s.s.listener.ArticleEventListener    : Article created: Article(id=1, title=My first article, content=This is my first article. It's not very long, but it's a start., author=Author(id=1, name=Victor))
 ```

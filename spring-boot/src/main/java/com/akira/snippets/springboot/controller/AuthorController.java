@@ -14,7 +14,7 @@ public class AuthorController {
 
     @GetMapping("/{id}")
     public AuthorVO findById(@PathVariable("id") Integer id) {
-        Author author = authorService.findById(id);
+        Author author = authorService.findDetailedById(id);
         return new AuthorVO(author);
     }
 

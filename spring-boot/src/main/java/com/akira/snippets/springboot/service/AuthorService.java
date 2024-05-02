@@ -5,6 +5,6 @@ import com.akira.snippets.springboot.pojo.entity.Author;
 
 public interface AuthorService {
     Author findOrCreate(AuthorAO authorAO);
-    Author findById(Integer id);
+    Author findDetailedById(Integer id);
     void deleteById(Integer id);
 }
